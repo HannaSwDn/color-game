@@ -24,11 +24,11 @@ describe("HomePage", () => {
   }));
 
   beforeEach(() => {
-    fixture = TestBed.createComponent(HomePage);
+    let fixture = TestBed.createComponent(HomePage);
     homepage = fixture.componentInstance;
   });
 
-	it("should create the home page", () => {
+  it("should create the home page", () => {
     expect(homepage).toBeTruthy();
     expect(homepage instanceof HomePage).toEqual(true);
   });
