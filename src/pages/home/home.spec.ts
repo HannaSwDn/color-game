@@ -33,15 +33,11 @@ describe("HomePage", () => {
     expect(homepage instanceof HomePage).toEqual(true);
   });
 
-  it('should have user default values', () => {
-    expect(homepage.user).toEqual({ distance: 1000, age: 20 });
+  it("should have user array", () => {
+    expect(homepage.user).toEqual({});
   });
 
-  it('should have calculate function', () => {
-    spyOn(homepage, 'calculate'); // we use jasmine to spy on a function
-
-    homepage.calculate()
-
-    expect(homepage.calculate).toHaveBeenCalled(); // check if the function has been called
+  it('should have user high score', () => {
+    expect(homepage.user).toEqual({ high_score: 10 });
   });
 });

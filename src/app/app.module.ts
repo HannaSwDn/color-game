@@ -5,15 +5,18 @@ import { MyApp } from './app.component';
 
 import { HomePage } from '../pages/home/home';
 import { TabsPage } from '../pages/tabs/tabs';
+import { GamePage } from '../pages/game/game';
 
 import { StatusBar } from '@ionic-native/status-bar';
 import { SplashScreen } from '@ionic-native/splash-screen';
+import { CalculationProvider } from '../providers/calculation/calculation';
 
 @NgModule({
   declarations: [
     MyApp,
     HomePage,
-    TabsPage
+    TabsPage,
+    GamePage
   ],
   imports: [
     BrowserModule,
@@ -23,12 +26,14 @@ import { SplashScreen } from '@ionic-native/splash-screen';
   entryComponents: [
     MyApp,
     HomePage,
-    TabsPage
+    TabsPage,
+    GamePage
   ],
   providers: [
     StatusBar,
     SplashScreen,
-    {provide: ErrorHandler, useClass: IonicErrorHandler}
+    {provide: ErrorHandler, useClass: IonicErrorHandler},
+    CalculationProvider
   ]
 })
 export class AppModule {}
