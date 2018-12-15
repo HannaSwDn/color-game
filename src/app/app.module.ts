@@ -9,8 +9,6 @@ import { GamePage } from '../pages/game/game';
 
 import { StatusBar } from '@ionic-native/status-bar';
 import { SplashScreen } from '@ionic-native/splash-screen';
-import { CalculationProvider } from '../providers/calculation/calculation';
-import { CalculationsProvider } from '../providers/calculations/calculations';
 
 @NgModule({
   declarations: [
@@ -34,8 +32,6 @@ import { CalculationsProvider } from '../providers/calculations/calculations';
     StatusBar,
     SplashScreen,
     {provide: ErrorHandler, useClass: IonicErrorHandler},
-    CalculationProvider,
-    CalculationsProvider
   ]
 })
 export class AppModule {}
