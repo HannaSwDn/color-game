@@ -1,17 +1,18 @@
-import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
+import 'rxjs/add/operator/map';
 
-/*
-  Generated class for the CalculationProvider provider.
+import { CooperProvider } from '../cooper/cooper';
 
-  See https://angular.io/guide/dependency-injection for more info on providers
-  and Angular DI.
-*/
 @Injectable()
 export class CalculationProvider {
+public gender: string;
+public age: number;
+public assessmentMessage: string;
 
-  constructor(public http: HttpClient) {
-    console.log('Hello CalculationProvider Provider');
-  }
+    constructor(private cooper: CooperProvider) {}
+
+    doAssessment(distance: number): void {
+        this.assessmentMessage = this.cooper.assess(this, distance);
+    }
 
 }
