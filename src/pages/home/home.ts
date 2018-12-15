@@ -6,9 +6,11 @@ import { NavController } from 'ionic-angular';
   templateUrl: 'home.html'
 })
 export class HomePage {
+  user: any = {};
 
   constructor(public navCtrl: NavController) {
-
+    this.user = { high_score: 10 };
   }
 
 }
+
